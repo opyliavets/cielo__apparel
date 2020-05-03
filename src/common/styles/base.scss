@@ -1,0 +1,25 @@
+$headerHeight: 150px;
+* {
+    cursor: default;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 1380px;
+}
+
+.coverage{
+    visibility: visible;
+    top: 330px;
+    transition: top 0.8s ease-out 0s;
+
+}
+

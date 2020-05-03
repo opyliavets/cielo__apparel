@@ -1,0 +1,495 @@
+$introHeight: 700px;
+$sectionHeight:600px;
+$latestHeight:200px;
+$goodsHeight: 500px;
+$girlsHeight: 275px;
+$followHeight:275px;
+$sectionImgMargin: 10px 5px 10px 10px; 
+$itemGoodsHeight: 25%;
+$itemGoodsFont-family: 'Proxima Nova Rg';
+$itemGoodsText-align: center;
+$itemGoodsFont-sixe: 1.2em;
+$itemGoodsFont-color: rgb(73, 73, 73);
+$itemGoodsPosAbsTop:350px;
+$itemGoodsBCGColor: white;
+$itemGoodsHeigthSecBl: 50px;
+$itemGoodsFonts-sizePrice:0.80em;
+$newArrivalContent: 'New Arrival';
+$newArrivalPosition: absolute;
+$newArrivalTop: 0;
+$newArrivalLeft: 0;
+$newArrivalBackground-color: rgba(73, 73, 73, 0.658);
+$newArrivaltext-align: center;
+$newArrivalVertical-align: baseline;
+$newArrivalWidth: 35%;
+$newArrivalHeight: 7%;
+$newArrivalcolor: white;
+$newArrivalfont-size: 0.95em;
+$displayFlex: flex;
+$alignCenter: center;
+$justifyCenter: center;
+$padding-top5PX: 10px;
+
+.home{
+    width: 100%;
+    min-height: 1000px;
+    z-index: -5;
+    font-family: 'Proxima Nova Rg';
+
+    &__blocks{
+        height: 200px;
+        width: 100%;
+        
+        &0{
+            height: $introHeight;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        &1{
+            height: $sectionHeight + 20px;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        &2{
+            height: $latestHeight;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        &3{
+            height: $goodsHeight;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+
+        &4{
+            height: $girlsHeight;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        &5{
+            height: $followHeight;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+    }
+
+    &__intro{
+        height: $introHeight - 2px;
+
+        &0{
+            background-color: rgb(235, 233, 233);
+            width: 35%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &1{
+            background-image: url(../../../assets/img/Beach-Workout-Blog.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 65%;
+            margin-left: 10px;
+        }
+    }
+
+    &__title{
+        font-family: 'Proxima Nova Rg';
+        font-size: 43px;
+        font-weight: 600;
+        color: rgb(92, 91, 91);
+        text-align: center;
+        width: 75%;
+        margin-bottom: 25px;
+    }  
+   
+    &__button{
+        font-family: 'Proxima Nova Rg';
+        font-size: 17px;
+        font-weight: 400;
+        background-color: transparent;
+        border: 1px solid rgb(92, 91, 91);
+        width: 155px;
+        height: 40px;
+        color:rgb(92, 91, 91);
+
+        &:hover {
+            color: white; 
+            background-color: rgb(92, 91, 91);
+            transition-duration: 0.5s;
+        }
+    }
+
+    &__sections{
+        height: $sectionHeight;
+        width: 33.33%;
+
+        &0{
+            background-image: url(../../../assets/img/Girl01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: $sectionImgMargin; 
+            margin-left: 0;     
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+        }
+
+        &1{
+            background-image: url(../../../assets/img/sections2img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: $sectionImgMargin;  
+            display: flex;
+            justify-content: center;
+            align-items: center;         
+        }
+
+        &2{
+            background-image: url(../../../assets/img/sections3img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: $sectionImgMargin;
+            margin-right: 0;     
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+        }
+
+        &_titles{
+            font-family:'Proxima Nova Lt';
+            font-size: 36px;
+            font-weight: 800;
+            color: white;
+            width: 50%;
+            text-align: center;
+        }
+    }
+
+    &__latest{
+        height: $latestHeight - 2px;;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &_title{
+            font-family:'Proxima Nova Lt';
+            font-size: 45px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: rgb(73, 73, 73);
+            width: 50%;
+            text-align: center;
+        }
+    }
+
+    &__goods{
+        height: $goodsHeight - 2px;
+        width: 22.5%;
+        margin-left: 10px; 
+        margin-right: 10px;
+        display: flex; 
+        flex-flow: column nowrap;
+        font-family: 'Proxima Nova Rg';
+        position: relative;
+        
+        &_items-1-{
+            width: 100%;
+            position: relative;
+            
+            &0{
+                background-image: url(../../../assets/img/goods__top.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;
+                &::after{
+                    content: $newArrivalContent;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;         
+
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+
+                &::after{
+                    content: '\0a ___ \0a 19,00$';
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-2-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/goods__trousers.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                &::after{
+                    content: $newArrivalContent;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top: $itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+               
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: '\0a ___ \0a 9,00$';
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-3-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/goods__bra.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                &::after{
+                    content: $newArrivalContent;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+
+                &::after{
+                    content: '\0a ___ \0a 18,00$';
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-4-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/goods__leggins.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                &::after{
+                    content: $newArrivalContent;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: '\0a ___ \0a 28,00$';
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &:last-child{
+            margin-right: 15px;
+        }
+
+        &:first-child{
+            margin-left: 15px;
+        }
+    }
+
+    &__girls{
+        height: $girlsHeight - 2px;
+        width: 20%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        
+        &0{
+            background-image: url(../../../assets/img/girls2.jpg);          
+        }
+
+        &1{
+            background-image: url(../../../assets/img/girls3.jpg);
+        }
+
+        &2{
+            background-image: url(../../../assets/img/girls4.jpg);
+        }
+
+        &3{
+            background-image: url(../../../assets/img/girls5.jpg);
+        }
+
+        &4{
+            background-image: url(../../../assets/img/girls6.jpg);
+        }
+
+        &:hover{ 
+            box-shadow: 5000px 5000px 0 0 rgba(0, 0, 0, 0.6) inset;
+            transition: box-shadow 0.15s ease-in 0s;
+            &::after{
+                content: 'Follow me @a.pyliavets on Instagram or on the other social network';
+                width: 75%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 15px;
+                text-align: $newArrivaltext-align;
+                vertical-align: $newArrivalVertical-align;
+
+            }
+        }
+    }
+
+    &__follow{
+        height: $followHeight - 2px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

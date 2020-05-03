@@ -1,0 +1,112 @@
+$emailElemsWidth: 200px;
+$emailElemsPoition: relative;
+$emailElemsTop: -25px;
+*{
+    box-sizing: border-box;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    min-height:425px;
+    height: 425px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    font-family: 'Proxima Nova Rg';
+    border-top: 0.5px solid rgba(85, 85, 85, 0.8);
+
+    &__top-block{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    &__nav-block{
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+    }
+
+    &__copyrights-block{
+        height: 20%;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: rgba(85, 85, 85, 0.8);
+        border-top: 0.5px solid rgba(85, 85, 85, 0.8);
+    }
+
+    &__title{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 20%;
+        width: 100%;
+        color:rgba(121, 46, 46, 0.9);
+        font-size: 1.25em;
+        font-weight: 600;
+    }
+
+    &__content{
+        position: relative;
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        & > ul{
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 0;
+            margin-left: 0;
+
+        }
+    }
+
+    &__list{
+        list-style-type: none;
+        color:rgba(90, 90, 90, 0.9);
+        margin-bottom: 10px;
+        
+    }
+
+    &__email{
+        position: $emailElemsPoition;
+        top: $emailElemsTop;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 25px;
+        width:$emailElemsWidth;
+        text-align: center;
+        outline: none;
+        box-sizing: border-box;
+
+        &:focus{
+            border-bottom: 2px solid red;
+        }
+
+        &::placeholder{
+            font-size: 0.9em;
+            text-overflow: ellipsis;
+            color: rgb(90, 90, 90);
+        }
+    }
+
+    &__button{
+        width:$emailElemsWidth;
+        position: $emailElemsPoition;
+        top: $emailElemsTop;
+    }
+}
