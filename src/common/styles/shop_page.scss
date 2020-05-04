@@ -1,3 +1,8 @@
+@import './home_page.scss';
+$goodsItemHeight: 375px;
+$goodsPrice: '\0a ___ \0a 00,00$';
+$bestSeller: 'Best Seller';
+
 .shop{
     position: relative;
     top: inherit;
@@ -22,7 +27,7 @@
         }
         
         &1{
-            height: 1000px;
+            min-height: 1000px;
             border: 1px solid red;
             display: flex;
             flex-flow: row nowrap;
@@ -60,14 +65,940 @@
         width: 50%;
         display: flex;
         flex-flow: column nowrap;
+        margin: 10px 0;
 
         &0{
             border: 1px solid rgb(100, 100, 179);
             width: 20%;
         }
         &1{
-            border: 1px solid rgb(100, 179, 120);
             width: 80%;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+    }
+
+    &__goods{
+        height: $goodsItemHeight - 2px;
+        width: 22.5%;
+        margin-left: 10px; 
+        margin-right: 10px;
+        display: flex; 
+        flex-flow: column nowrap;
+        font-family: 'Proxima Nova Rg';
+        position: relative;
+        &_items-1-{
+            width: 100%;
+            position: relative;
+            
+            &0{
+                background-image: url(../../../assets/img/bra1.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;
+                // &::after{
+                //     content: $newArrivalContent;
+                //     position: $newArrivalPosition;
+                //     top: $newArrivalTop;
+                //     left: $newArrivalLeft;
+                //     background-color: $newArrivalBackground-color;
+                //     text-align: $newArrivaltext-align;
+                //     vertical-align: $newArrivalVertical-align;
+                //     width: $newArrivalWidth;
+                //     height: $newArrivalHeight;
+                //     color: $newArrivalcolor;
+                //     font-size: $newArrivalfont-size;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                // }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;         
+
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-2-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/bra2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                &::after{
+                    content: $newArrivalContent;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top: $itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+               
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-3-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/bra3.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                // &::after{
+                //     content: $newArrivalContent;
+                //     position: $newArrivalPosition;
+                //     top: $newArrivalTop;
+                //     left: $newArrivalLeft;
+                //     background-color: $newArrivalBackground-color;
+                //     text-align: $newArrivaltext-align;
+                //     vertical-align: $newArrivalVertical-align;
+                //     width: $newArrivalWidth;
+                //     height: $newArrivalHeight;
+                //     color: $newArrivalcolor;
+                //     font-size: $newArrivalfont-size;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                // }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-4-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/bra4.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                &::after{
+                    content: $bestSeller;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-5-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/legins1.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                &::after{
+                    content: $newArrivalContent;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-6-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/legins2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                // &::after{
+                //     content: $newArrivalContent;
+                //     position: $newArrivalPosition;
+                //     top: $newArrivalTop;
+                //     left: $newArrivalLeft;
+                //     background-color: $newArrivalBackground-color;
+                //     text-align: $newArrivaltext-align;
+                //     vertical-align: $newArrivalVertical-align;
+                //     width: $newArrivalWidth;
+                //     height: $newArrivalHeight;
+                //     color: $newArrivalcolor;
+                //     font-size: $newArrivalfont-size;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                // }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-7-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/legins3.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                &::after{
+                    content: $bestSeller;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-8-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/legins4.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                // &::after{
+                //     content: $newArrivalContent;
+                //     position: $newArrivalPosition;
+                //     top: $newArrivalTop;
+                //     left: $newArrivalLeft;
+                //     background-color: $newArrivalBackground-color;
+                //     text-align: $newArrivaltext-align;
+                //     vertical-align: $newArrivalVertical-align;
+                //     width: $newArrivalWidth;
+                //     height: $newArrivalHeight;
+                //     color: $newArrivalcolor;
+                //     font-size: $newArrivalfont-size;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                // }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-9-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/shirt1.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                &::after{
+                    content: $newArrivalContent;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-10-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/shirt2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                // &::after{
+                //     content: $newArrivalContent;
+                //     position: $newArrivalPosition;
+                //     top: $newArrivalTop;
+                //     left: $newArrivalLeft;
+                //     background-color: $newArrivalBackground-color;
+                //     text-align: $newArrivaltext-align;
+                //     vertical-align: $newArrivalVertical-align;
+                //     width: $newArrivalWidth;
+                //     height: $newArrivalHeight;
+                //     color: $newArrivalcolor;
+                //     font-size: $newArrivalfont-size;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                // }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-11-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/shirt3.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                // &::after{
+                //     content: $newArrivalContent;
+                //     position: $newArrivalPosition;
+                //     top: $newArrivalTop;
+                //     left: $newArrivalLeft;
+                //     background-color: $newArrivalBackground-color;
+                //     text-align: $newArrivaltext-align;
+                //     vertical-align: $newArrivalVertical-align;
+                //     width: $newArrivalWidth;
+                //     height: $newArrivalHeight;
+                //     color: $newArrivalcolor;
+                //     font-size: $newArrivalfont-size;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                // }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-12-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/shirt4.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                // &::after{
+                //     content: $newArrivalContent;
+                //     position: $newArrivalPosition;
+                //     top: $newArrivalTop;
+                //     left: $newArrivalLeft;
+                //     background-color: $newArrivalBackground-color;
+                //     text-align: $newArrivaltext-align;
+                //     vertical-align: $newArrivalVertical-align;
+                //     width: $newArrivalWidth;
+                //     height: $newArrivalHeight;
+                //     color: $newArrivalcolor;
+                //     font-size: $newArrivalfont-size;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                // }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-13-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/short1.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                &::after{
+                    content: $newArrivalContent;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-14-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/short2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                // &::after{
+                //     content: $newArrivalContent;
+                //     position: $newArrivalPosition;
+                //     top: $newArrivalTop;
+                //     left: $newArrivalLeft;
+                //     background-color: $newArrivalBackground-color;
+                //     text-align: $newArrivaltext-align;
+                //     vertical-align: $newArrivalVertical-align;
+                //     width: $newArrivalWidth;
+                //     height: $newArrivalHeight;
+                //     color: $newArrivalcolor;
+                //     font-size: $newArrivalfont-size;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                // }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-15-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/short3.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                &::after{
+                    content: $bestSeller;
+                    position: $newArrivalPosition;
+                    top: $newArrivalTop;
+                    left: $newArrivalLeft;
+                    background-color: $newArrivalBackground-color;
+                    text-align: $newArrivaltext-align;
+                    vertical-align: $newArrivalVertical-align;
+                    width: $newArrivalWidth;
+                    height: $newArrivalHeight;
+                    color: $newArrivalcolor;
+                    font-size: $newArrivalfont-size;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
+        }
+
+        &_items-16-{
+            width: 100%;
+            position: relative;
+
+            &0{
+                background-image: url(../../../assets/img/short4.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 75%;  
+                // &::after{
+                //     content: $newArrivalContent;
+                //     position: $newArrivalPosition;
+                //     top: $newArrivalTop;
+                //     left: $newArrivalLeft;
+                //     background-color: $newArrivalBackground-color;
+                //     text-align: $newArrivaltext-align;
+                //     vertical-align: $newArrivalVertical-align;
+                //     width: $newArrivalWidth;
+                //     height: $newArrivalHeight;
+                //     color: $newArrivalcolor;
+                //     font-size: $newArrivalfont-size;
+                //     display: flex;
+                //     align-items: center;
+                //     justify-content: center;
+                // }
+            }
+
+            &1{
+                visibility: hidden;
+                position:absolute;
+                top:$itemGoodsPosAbsTop;
+                left:0;
+                height: $itemGoodsHeigthSecBl;
+                display: $displayFlex;
+                align-items: $alignCenter;
+                justify-content: $justifyCenter;
+                font-family: 'Proxima Nova Rg';
+                font-weight: 300;
+                font-size: 15px;
+                background-color: $itemGoodsBCGColor;
+                
+            }
+
+            &2{
+                height: $itemGoodsHeight;
+                text-align: $itemGoodsText-align;
+                font-size: $itemGoodsFont-sixe;
+                color: $itemGoodsFont-color;
+
+                &::after{
+                    content: $goodsPrice;
+                    white-space: pre;
+                    font-size: $itemGoodsFonts-sizePrice;
+                }
+            }
         }
 
     }

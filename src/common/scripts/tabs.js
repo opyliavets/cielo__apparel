@@ -1,6 +1,7 @@
 window.onload = function total() {
     hideAllTabs();
     quickView();
+    quickViewonShopPage();
     openingMenu();
 // FUNCTION HIDE ALL TABS - EXECUTIVE FOR HIDING OF SHOWING TABS LOGIC
     function hideAllTabs() {
@@ -86,6 +87,47 @@ window.onload = function total() {
             if (target.classList.contains('pointing__blocks')) {
                 for (let i = 0; i < pointingBlock.length; i++) {
                     if (target === pointingBlock[i]) {
+                        item[i].classList.remove('coverage');
+                        break;
+                    }
+                }
+            }
+        };
+    }
+    // FUNCTION QUICK VIEW SHOP PAGE - EXECUTIVE FOR SHOVING ANIMATION "QUICK VIEW" SHOP 
+    function quickViewonShopPage() {
+        let block = document.querySelector('.shop__catalogue1');
+        let items = document.querySelectorAll('.shop__goods');
+        let item = [];
+
+        for (let z = 0; z < items.length; z++ ){
+            item[z] = items[z].children[1];
+        };        
+        for (let y = 0; y < items.length; y++) {
+            items[y].classList.add('pointing__blocks');
+        };
+        for (let x = 0; x < item.length; x++) {
+            item[x].textContent = 'Quick View';
+        };    
+            
+        block.onmouseover = (event) => {
+            let target = event.target;
+            console.log(target);
+            if (target.classList.contains('pointing__blocks')) {
+                for (let i = 0; i < items .length; i++) {
+                    if (target === items [i]) {
+                        item[i].classList.add('coverage');
+                        break;
+                    }
+                }
+            }
+        };
+        
+        block.onmouseout = (event) => {
+            let target = event.target;
+            if (target.classList.contains('pointing__blocks')) {
+                for (let i = 0; i < items.length; i++) {
+                    if (target === items[i]) {
                         item[i].classList.remove('coverage');
                         break;
                     }
