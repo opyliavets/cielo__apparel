@@ -7,3 +7,9 @@
 .content{
     z-index: -5;
 }
+
+@media (max-width:775px){
+    .tab{
+        margin-top: $headerHeightSmallSize;
+    } 
+}
