@@ -3,6 +3,7 @@ window.onload = function total() {
     quickView();
     quickViewonShopPage();
     openingMenu();
+    makeBurgerMenu();
 // FUNCTION HIDE ALL TABS - EXECUTIVE FOR HIDING OF SHOWING TABS LOGIC
     function hideAllTabs() {
         let tab; // заголовок вкладки
@@ -145,5 +146,42 @@ window.onload = function total() {
         }        
     }
 }    
+// FUNCTION THAN MAKES BURGER MENU FOR SMALL DISPLAYS
+function makeBurgerMenu() {
+    class Burger {
+        constructor(root) {
+            this.root = root;
+            this.render();
+        }
 
+        render() {
+            this.burger = document.createElement('button');
+            this.burger.classList.add('hamburger');
+            this.burger.classList.add('hamburger--squeeze');
+            this.burger.addEventListener('click', () => {
+                if (this.burger.classList.contains('is-active')) {
+                    this.burger.classList.remove('is-active');
+                } else { this.burger.classList.add('is-active'); }
+            });
+            this.burgerbox = document.createElement('span');
+            this.burgerbox.classList.add('hamburger-box');
+            this.burgerinner = document.createElement('span');
+            this.burgerinner.classList.add('hamburger-inner');
+            this.burgerbox.append(this.burgerinner);
+            this.burger.append(this.burgerbox);
+            this.root.append(this.burger);
+        }
+    };
+    
+    let headerMenu = document.querySelector('.header__menu-block');
+    let windowWidth = window.innerWidth;
+    let item;
+    if (windowWidth < 776) {
+        item = new Burger(
+            headerMenu
+            );    
+    }
+
+    
+}
 

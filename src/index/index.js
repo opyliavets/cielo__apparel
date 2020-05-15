@@ -9,6 +9,7 @@ import '../common/styles/contact_page.scss';
 import '../common/styles/footer.scss';
 import '../common/styles/content.scss';
 import '../common/styles/normalize.scss';
+import '../common/styles/hamburger.scss';
 
 
 import '../../assets/fonts/stylesheet.css';
