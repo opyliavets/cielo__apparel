@@ -24,3 +24,9 @@ $headerHeightSmallSize:0;
 
 }
 
+@media(max-width: 775px){
+    html, body {
+        overflow-x: hidden;
+    }
+}
+

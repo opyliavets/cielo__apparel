@@ -1049,3 +1049,161 @@ $bestSeller: 'Best Seller';
 .open{
     display: block;
 }
+
+@media (max-width:775px){
+    .shop{
+        position: relative;
+        top: inherit;
+        bottom: inherit;
+        width: 100%;
+        min-height: 1000px;
+        z-index: -5;
+        display: flex;
+        flex-flow: column nowrap;
+        font-family: 'Proxima Nova Rg';
+    
+        &__blocks{
+            width: 100%;
+            min-height: 500px;
+    
+            &0{
+                display: flex;
+                flex-flow: column-reverse nowrap; 
+                height: 750px;
+     
+                        
+            }
+            
+            &1{
+                min-height: 1000px;
+                display: flex;
+                flex-flow: column nowrap;
+            }
+        }
+
+        &__intro{
+    
+            &0{
+                width: 100%;
+                background-color: rgb(235, 233, 233);
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            &1{
+                width: 100%;
+                background-image: url(../../../assets/img/shop__intro__img.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-left: 0;
+            }
+        }
+
+        &__catalogue{
+            &0{
+                min-height: 50px;
+                width: 100%
+            }
+
+            &1{
+                width: 100%;
+                min-height: 1500px;
+                display: flex;
+                flex-flow: column nowrap;
+
+                &::after{
+                    content: '';
+                }
+            }
+
+        }
+
+        &__goods{
+            height: 450px;
+            width: 80%;
+            margin-left: 40px; 
+            margin-right: 20px;
+            display: flex; 
+            flex-flow: column nowrap;
+            font-family: 'Proxima Nova Rg';
+            position: relative;
+
+            &1{
+                display: none;
+            }
+            &0{
+                display: none;
+            }
+            &3{
+                display: none;
+            }
+            &6{
+                display: none;
+            }
+            &7{
+                display: none;
+            }
+            &5{
+                display: none;
+            }
+            &10{
+                display: none;
+            }
+            &11{
+                display: none;
+            }
+            &9{
+                display: none;
+            }
+            &14{
+                display: none;
+            }
+            &15{
+                display: none;
+            }
+            &13{
+                display: none;
+            }
+        }   
+    }
+
+    .catalogue{
+
+        &__filterBy{
+            font-weight: 300;
+            font-size: 17.5px;
+            color: rgba(41, 41, 41, 0.808);
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(175, 175, 175);
+            width: 285px;
+        }
+
+        &__filters{
+            display: none;
+            
+        }
+    
+        &__span{
+            font-weight: 100;
+            font-size: 15.5px;
+            color: rgba(73, 73, 73, 0.808);
+            min-height: 70px;
+            display: hidden;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(175, 175, 175);
+            width: 195px;
+    
+            &::after{
+                content: '\271A';
+                font-weight: 100;
+            }
+        }
+    
+    }
+}

@@ -501,6 +501,7 @@
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: center;
+                align-items: center;
             }
     
             &4{
@@ -632,15 +633,15 @@
     
         &__goods{
             height: $goodsHeightSmallScren / 4;
-            width: 90%;
-            margin: 0 10px;
+            width: 300px;
             display: flex; 
             flex-flow: column nowrap;
+            align-items: center;
             font-family: 'Proxima Nova Rg';
             position: relative;
             
             &_items-1-{
-                width: 100%;
+                width: 90%;
                 position: relative;
                 
                 &0{
@@ -871,7 +872,7 @@
     
         &__girls{
             height: $girlsHeightSmallScren;
-            width: 90%;
+            width: 100%;
             background-repeat: no-repeat;
             background-size: cover;
             display: flex;
