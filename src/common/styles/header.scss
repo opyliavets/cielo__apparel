@@ -130,6 +130,12 @@ $logosize: 35px;
     }
 }
 
+.login-link{
+    display: flex;
+    flex-flow: row nowrap;
+    text-decoration: none;
+}
+
 $leftretlogo775px:25px;
 $logosize775px: 25px;
 $logotop775px:25px;

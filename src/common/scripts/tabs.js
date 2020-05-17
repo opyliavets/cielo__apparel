@@ -4,15 +4,20 @@ window.onload = function total() {
     quickViewonShopPage();
     openingMenu();
     makeBurgerMenu();
+    logInForm();
 // FUNCTION HIDE ALL TABS - EXECUTIVE FOR HIDING OF SHOWING TABS LOGIC
     function hideAllTabs() {
+        clickOnStShopButton();
+        clickOnCeiloStory();
+        clickOnOurCollectio();
+        clickOnOurContactUs();
         let tab; // заголовок вкладки
         let tabContent; // блок содержащий контент вкладки
         let footerMenutab;
         tab = document.querySelectorAll('.menu__item');
         tabContent = document.querySelectorAll('.tab');
         footerMenuTab = document.querySelectorAll('.footer__list');
-        let body = document.querySelector('body');
+        let body = document.querySelector('body');        
         for (let i = 0; i < tabContent.length; i++) {
             tabContent[i].classList.remove('show');
             tabContent[i].classList.add('hide');
@@ -57,6 +62,40 @@ window.onload = function total() {
                 tabContent[b].classList.add('show');
             }
         }
+
+        function clickOnStShopButton() {
+            let button = document.getElementById('idHomeButton0');
+            button.addEventListener('click', () => {
+                hideTabsContent(0);
+                showTabsContent(1);
+            })
+        }
+
+        function clickOnCeiloStory() {
+            let button = document.getElementById('idHomeSectio0');
+            button.addEventListener('click', () => {
+                hideTabsContent(0);
+                showTabsContent(2);
+            })
+        }
+
+        function clickOnOurCollectio() {
+            let button = document.getElementById('idHomeSectio1');
+            button.addEventListener('click', () => {
+                hideTabsContent(0);
+                showTabsContent(1);
+            })
+        }
+
+        function clickOnOurContactUs() {
+            let button = document.getElementById('idHomeSectio2');
+            button.addEventListener('click', () => {
+                hideTabsContent(0);
+                showTabsContent(3);
+            })
+        }
+
+        
     }
 // FUNCTION QUICK VIEW - EXECUTIVE FOR SHOVING ANIMATION "QUICK VIEW" OF PART WITH NEW ARRIVALS
     function quickView () {
@@ -180,8 +219,11 @@ function makeBurgerMenu() {
         item = new Burger(
             headerMenu
             );    
-    }
-
-    
+    }  
 }
 
+// FUNCTION FOR LOGIN FORM
+function logInForm() {
+    let logInButton = document.querySelector('.login-link');
+    logInButton.href = 'logIn.html';
+}

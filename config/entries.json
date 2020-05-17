@@ -1,5 +1,8 @@
 {
   "index": [
     "./src/index/index.js"
+  ],
+  "logIn": [
+    "./src/logIn/logIn.js"
   ]
 }
