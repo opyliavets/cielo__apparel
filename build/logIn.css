@@ -19,15 +19,9 @@ body {
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   color: #505050; }
-  .logInForm__with-facebook {
-    background-color: #3b5998;
-    color: white; }
-  .logInForm__with-google {
-    background-color: #4285f4;
-    color: white; }
   .logInForm__title-block {
     display: flex;
     flex-flow: column nowrap;
@@ -37,25 +31,161 @@ body {
     font-size: 50px;
     line-height: 2.5px;
     font-weight: 600; }
+  .logInForm__buttons-block {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    width: 100%; }
+  .logInForm__with-facebook {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease; }
+    .logInForm__with-facebook:hover {
+      background-color: #4e69a1;
+      transition: 0.5s ease; }
+  .logInForm__with-google {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease; }
+    .logInForm__with-google:hover {
+      background-color: #6fa3f7;
+      transition: 0.5s ease; }
   .logInForm__or {
-    color: #505050; }
+    color: #686868; }
     .logInForm__or::after {
-      content: " ——————— ";
-      color: #505050; }
+      content: " ———————— ";
+      color: #969696; }
     .logInForm__or::before {
-      content: " ——————— ";
-      color: #505050; }
+      content: " ———————— ";
+      color: #969696; }
+  .logInForm__with-email {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #a1a0a0;
+    color: #505050;
+    transition: 0.5s ease;
+    cursor: pointer; }
+    .logInForm__with-email:hover {
+      border: 1px solid #323232;
+      transition: 0,5s ease;
+      color: #323232; }
+  .logInForm__emailForm {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+  .logInForm__email {
+    width: 80%;
+    height: 45px;
+    outline: none !important;
+    border-radius: 1px;
+    border: none;
+    border-bottom: 1px solid #6e6e6e; }
+    .logInForm__email::-webkit-input-placeholder {
+      font-size: 15px;
+      font-weight: 500; }
+  .logInForm__password {
+    width: 80%;
+    height: 45px;
+    outline: none !important;
+    border-radius: 1px;
+    border: none;
+    border-bottom: 1px solid #6e6e6e; }
+    .logInForm__password::-webkit-input-placeholder {
+      font-size: 15px;
+      font-weight: 500; }
+      .logInForm__password::-webkit-input-placeholder:active {
+        transform: scale(0.5); }
+  .logInForm__signUpButton {
+    width: 80%;
+    height: 45px;
+    outline: none !important;
+    border-radius: 1px;
+    border: none;
+    background-color: #c26042;
+    color: white;
+    font-size: 1.05em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s ease; }
+    .logInForm__signUpButton:hover {
+      background-color: #d3785c;
+      transition: 0.5s ease; }
+  .logInForm__orSignUp::after {
+    content: " ————— ";
+    color: #969696; }
+  .logInForm__orSignUp::before {
+    content: " ————— ";
+    color: #969696; }
+  .logInForm__networks {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%; }
+  .logInForm__facebook-icon {
+    cursor: pointer; }
+  .logInForm__google-icon {
+    cursor: pointer; }
 
 .btn-form {
   width: 80%;
   height: 45px;
   outline: none !important;
-  border: none;
   border-radius: 1px; }
   .btn-form:focus {
     outline: none !important; }
   .btn-form:active {
     outline: none !important; }
+
+.sign-up__facebook {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+
+.sign-up__google {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+
+.sign-up__email {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+
+.signIn-link {
+  text-decoration: none;
+  color: #c26042;
+  margin-left: 5px; }
+
+.icon-box__facebook {
+  width: 30px;
+  height: 30px;
+  margin-right: 35px; }
+
+.icon-box__google {
+  width: 30px;
+  height: 30px;
+  margin-right: 35px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px; }
+  .icon-box__google > svg {
+    width: 25px;
+    height: 25px; }
 
 
 /*# sourceMappingURL=logIn.css.map*/

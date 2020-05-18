@@ -1,4 +1,47 @@
-$contentOR: ' \2014 \2014 \2014 \2014 \2014 \2014 \2014  ';
+$contentOR: ' \2014 \2014 \2014 \2014 \2014 \2014 \2014 \2014  ';
+$contentOR2: ' \2014 \2014 \2014 \2014 \2014  ';
+$fontSizeOfButtonNames: 15px;
+$fontWeigthOfButtonNames: 500;
+
+@mixin dFlexColumnNowrap {
+    display: flex;
+    flex-flow: column nowrap;
+};
+
+@mixin dFlexCRowNowrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+@mixin JustContSpacArouAligItemCenter {
+    justify-content: space-around;
+    align-items: center;    
+}
+
+@mixin JustContCenterAligItemCenter {
+    justify-content: center;
+    align-items: center;    
+}
+
+@mixin sizeOfBlocks {
+    width: 80%;
+    height: 45px;
+    outline: none !important;
+    border-radius: 1px;     
+}
+
+@mixin inputsFormatting {
+    border: none;
+    border-bottom: 1px solid rgb(110, 110, 110);
+}
+
+@mixin inputs {
+    @include sizeOfBlocks;
+    @include inputsFormatting;
+    vertical-align: bottom;
+}
+
+
 
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -21,27 +64,13 @@ body{
 .logInForm{
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
+    @include dFlexColumnNowrap;
+    @include JustContCenterAligItemCenter;
     color:rgb(80, 80, 80);
 
-    &__with-facebook{
-        background-color: rgb(59, 89, 152);
-        color: white;
-    }
-
-    &__with-google{
-        background-color: rgb(66,133,244);
-        color: white;
-    }
-
     &__title-block{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+        @include dFlexColumnNowrap;
+        @include JustContCenterAligItemCenter;
     }
 
     &__title{        
@@ -50,31 +79,196 @@ body{
         font-weight: 600;
     }
 
+    &__buttons-block{
+        @include dFlexColumnNowrap;
+        @include JustContSpacArouAligItemCenter;
+        height: 80%;
+        width: 100%;        
+    }
+
+    &__with-facebook{
+        background-color: rgb(59, 89, 152);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s ease;
+        
+        &:hover{
+            background-color: rgb(78, 105, 161);
+            transition: 0.5s ease;
+        }
+    }
+
+    &__with-google{
+        background-color: rgb(66,133,244);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s ease;
+
+        &:hover{
+            background-color: rgb(111, 163, 247);
+            transition: 0.5s ease;
+        }
+    }
+
     &__or{
-        color: rgb(80, 80, 80);
+        color:rgb(104, 104, 104);
         &::after{
             content: $contentOR;
-            color: rgb(80, 80, 80);
+            color: rgb(150, 150, 150);
         }
 
         &::before{
             content: $contentOR;
-            color: rgb(80, 80, 80);
+            color: rgb(150, 150, 150);
         }
     }
+
+    &__with-email{
+        @include dFlexCRowNowrap;
+        @include JustContCenterAligItemCenter;
+        background-color: white;
+        border: 1px solid rgb(161, 160, 160);
+        color: rgb(80, 80, 80);
+        transition: 0.5s ease;
+        cursor: pointer;
+
+        &:hover{
+            border: 1px solid rgb(50, 50, 50);
+            transition: 0,5s ease;
+            color: rgb(50, 50, 50);
+        }
+    }
+
+    &__emailForm{
+        @include dFlexColumnNowrap();
+        @include JustContSpacArouAligItemCenter;
+        width: 100%;
+        height: 100%;               
+    }
+
+    &__email{
+        @include sizeOfBlocks;
+        @include inputsFormatting;
+
+        &::-webkit-input-placeholder{
+            font-size: $fontSizeOfButtonNames;
+            font-weight: $fontWeigthOfButtonNames;
+        }
+     }
+
+    &__password{
+        @include sizeOfBlocks;
+        @include inputsFormatting;
+        
+        &::-webkit-input-placeholder{
+            font-size: $fontSizeOfButtonNames;
+            font-weight: $fontWeigthOfButtonNames;
+
+            &:active{
+                transform: scale(0.5);
+            }
+        }
+    }
+
+    &__signUpButton{
+        @include sizeOfBlocks;
+        border: none;
+        background-color: rgb(194, 96, 66);
+        color: white;
+        font-size: 1.05em;
+        font-weight: $fontWeigthOfButtonNames;
+        cursor: pointer;
+        transition: 0.5s ease;
+
+        &:hover{
+            background-color: rgb(211, 120, 92);
+            transition: 0.5s ease;
+        }
+    }
+
+    &__orSignUp{
+        
+        &::after{
+            content: $contentOR2;
+            color: rgb(150, 150, 150);
+        }
+
+        &::before{
+            content: $contentOR2;
+            color: rgb(150, 150, 150);
+        }
+    }
+
+    &__networks{
+        @include dFlexCRowNowrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 40%;
+    }
+
+    &__facebook-icon{
+        cursor: pointer;
+    }
+
+    &__google-icon{
+        cursor: pointer;
+    }
+
+
 }
 
 .btn-form{
-    width: 80%;
-    height: 45px;
-    outline: none !important;
-    border: none;
-    border-radius: 1px;
+    @include sizeOfBlocks;
 
     &:focus{
         outline: none !important;
     }
     &:active{
         outline: none !important;
+    }
+}
+.sign-up{
+    &__facebook{
+        @include dFlexCRowNowrap;
+        align-items: center;    
+    }
+    &__google{
+        @include dFlexCRowNowrap;
+        align-items: center;
+    }
+    &__email{
+        @include dFlexCRowNowrap;
+        align-items: center;
+    }   
+}
+.signIn-link{
+    text-decoration: none;
+    color: rgb(194, 96, 66);
+    margin-left: 5px;
+}
+$marginRightLoginBlocks: 35px;
+$sizesOfBlocksWithIcons: 30px;
+.icon-box{
+    &__facebook{
+        width: $sizesOfBlocksWithIcons;
+        height: $sizesOfBlocksWithIcons;
+        margin-right:$marginRightLoginBlocks;
+    }
+
+    &__google{
+        width: $sizesOfBlocksWithIcons;
+        height: $sizesOfBlocksWithIcons;
+        margin-right:$marginRightLoginBlocks;
+        background: white;
+        display: flex;
+        @include JustContCenterAligItemCenter;
+        border-radius: 2px;
+        
+        & > svg{
+            width: 25px;
+            height: 25px;
+        }
     }
 }
