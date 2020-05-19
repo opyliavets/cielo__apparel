@@ -181,7 +181,6 @@ window.onload = function total() {
         let body = document.querySelector('body');
         body.onclick = (event) => {
             let target = event.target;
-            console.log(target);
         }        
     }
 }    
@@ -208,6 +207,13 @@ function makeBurgerMenu() {
             this.burgerinner.classList.add('hamburger-inner');
             this.burgerbox.append(this.burgerinner);
             this.burger.append(this.burgerbox);
+            this.burger.addEventListener('click', () => {
+                let item = document.querySelector('.menu');
+                item.classList.toggle('menu__active');
+                let menu = document.querySelector('.header__menu-block');
+                menu.classList.toggle('menu__fixed');
+                this.burger.style.transform = 'translate(420%, -90%)';
+            })
             this.root.append(this.burger);
         }
     };

@@ -133,7 +133,7 @@ $logosize: 35px;
         }
 
         &_counter{
-            cursor: pointer;
+            
             transform: translate(-160%, 27%);
             color: white;
         }
@@ -225,27 +225,29 @@ $logotop775px:25px;
 }
 
 .menu{
-    width: 90%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding: 0;
+    visibility: hidden;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
-    top: 25px;
-    left: 10px;
     color: rgba(54, 54, 54, 0.9);
     font-size: 0.92em;
     font-weight: 400;
+    background-color: white;
 
     &__item{
-        display: none;
-
+        
         &:hover{
             color:rgba(119, 119, 119, 0.9);
         }
     }
-    &__login{
-        display: none;
+    &__login{        
         flex-flow: row nowrap;
         justify-content: space-between;
 
@@ -285,6 +287,14 @@ $logotop775px:25px;
         }
       
     }
+}
+
+.menu__active{
+    visibility: visible;        
+}
+
+.menu__fixed{
+    position: fixed;
 }
     
 }

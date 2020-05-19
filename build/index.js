@@ -1420,7 +1420,6 @@ window.onload = function total() {
 
     body.onclick = function (event) {
       var target = event.target;
-      console.log(target);
     };
   }
 }; // FUNCTION THAN MAKES BURGER MENU FOR SMALL DISPLAYS
@@ -1456,6 +1455,13 @@ function makeBurgerMenu() {
         this.burgerinner.classList.add('hamburger-inner');
         this.burgerbox.append(this.burgerinner);
         this.burger.append(this.burgerbox);
+        this.burger.addEventListener('click', function () {
+          var item = document.querySelector('.menu');
+          item.classList.toggle('menu__active');
+          var menu = document.querySelector('.header__menu-block');
+          menu.classList.toggle('menu__fixed');
+          _this.burger.style.transform = 'translate(420%, -90%)';
+        });
         this.root.append(this.burger);
       }
     }]);
