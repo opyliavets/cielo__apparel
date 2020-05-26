@@ -1211,11 +1211,10 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 window.onload = function total() {
+  makeBurgerMenu();
   hideAllTabs();
   quickView();
   quickViewonShopPage();
-  openingMenu();
-  makeBurgerMenu();
   logInForm(); // FUNCTION HIDE ALL TABS - EXECUTIVE FOR HIDING OF SHOWING TABS LOGIC
 
   function hideAllTabs() {
@@ -1271,6 +1270,12 @@ window.onload = function total() {
         tabContent[_i3].classList.remove('show');
 
         tabContent[_i3].classList.add("hide");
+
+        if (window.innerWidth < 776) {
+          hideMenuOnSmallScreens();
+        }
+
+        ;
       }
     }
 
@@ -1411,16 +1416,6 @@ window.onload = function total() {
         }
       }
     };
-  } // HERE WILL BE FUNCTION FOR SHOWING AND HIDING MENU ITEMS ON PAGE SHOP
-
-
-  function openingMenu() {
-    var titleItem = document.querySelector('.catalogue__collection-block');
-    var body = document.querySelector('body');
-
-    body.onclick = function (event) {
-      var target = event.target;
-    };
   }
 }; // FUNCTION THAN MAKES BURGER MENU FOR SMALL DISPLAYS
 
@@ -1443,11 +1438,7 @@ function makeBurgerMenu() {
         this.burger.classList.add('hamburger');
         this.burger.classList.add('hamburger--squeeze');
         this.burger.addEventListener('click', function () {
-          if (_this.burger.classList.contains('is-active')) {
-            _this.burger.classList.remove('is-active');
-          } else {
-            _this.burger.classList.add('is-active');
-          }
+          _this.burger.classList.toggle('is-active');
         });
         this.burgerbox = document.createElement('span');
         this.burgerbox.classList.add('hamburger-box');
@@ -1460,7 +1451,8 @@ function makeBurgerMenu() {
           item.classList.toggle('menu__active');
           var menu = document.querySelector('.header__menu-block');
           menu.classList.toggle('menu__fixed');
-          _this.burger.style.transform = 'translate(420%, -90%)';
+
+          _this.burger.classList.toggle('transformation-hamburger');
         });
         this.root.append(this.burger);
       }
@@ -1483,6 +1475,17 @@ function makeBurgerMenu() {
 function logInForm() {
   var logInButton = document.querySelector('.login-link');
   logInButton.href = 'logIn.html';
+} //FUNCTION 
+
+
+function hideMenuOnSmallScreens() {
+  var item = document.querySelector('.menu');
+  item.classList.remove('menu__active');
+  var menu = document.querySelector('.header__menu-block');
+  menu.classList.remove('menu__fixed');
+  var burger = document.querySelector('.hamburger');
+  burger.classList.remove('transformation-hamburger');
+  burger.classList.remove('is-active');
 }
 
 /***/ }),

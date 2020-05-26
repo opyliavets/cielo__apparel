@@ -1,9 +1,8 @@
 window.onload = function total() {
+    makeBurgerMenu();
     hideAllTabs();
     quickView();
     quickViewonShopPage();
-    openingMenu();
-    makeBurgerMenu();
     logInForm();
 // FUNCTION HIDE ALL TABS - EXECUTIVE FOR HIDING OF SHOWING TABS LOGIC
     function hideAllTabs() {
@@ -52,6 +51,9 @@ window.onload = function total() {
             for (let i = a; i < tabContent.length; i++) {
                 tabContent[i].classList.remove('show');
                 tabContent[i].classList.add("hide");
+                if (window.innerWidth < 776) {
+                    hideMenuOnSmallScreens();
+                }; 
             }
         }
     
@@ -175,14 +177,6 @@ window.onload = function total() {
             }
         };
     }
-// HERE WILL BE FUNCTION FOR SHOWING AND HIDING MENU ITEMS ON PAGE SHOP
-    function openingMenu() {
-        let titleItem = document.querySelector('.catalogue__collection-block');
-        let body = document.querySelector('body');
-        body.onclick = (event) => {
-            let target = event.target;
-        }        
-    }
 }    
 // FUNCTION THAN MAKES BURGER MENU FOR SMALL DISPLAYS
 function makeBurgerMenu() {
@@ -197,9 +191,7 @@ function makeBurgerMenu() {
             this.burger.classList.add('hamburger');
             this.burger.classList.add('hamburger--squeeze');
             this.burger.addEventListener('click', () => {
-                if (this.burger.classList.contains('is-active')) {
-                    this.burger.classList.remove('is-active');
-                } else { this.burger.classList.add('is-active'); }
+                this.burger.classList.toggle('is-active');
             });
             this.burgerbox = document.createElement('span');
             this.burgerbox.classList.add('hamburger-box');
@@ -207,12 +199,12 @@ function makeBurgerMenu() {
             this.burgerinner.classList.add('hamburger-inner');
             this.burgerbox.append(this.burgerinner);
             this.burger.append(this.burgerbox);
-            this.burger.addEventListener('click', () => {
+            this.burger.addEventListener('click', () => {                
                 let item = document.querySelector('.menu');
                 item.classList.toggle('menu__active');
                 let menu = document.querySelector('.header__menu-block');
                 menu.classList.toggle('menu__fixed');
-                this.burger.style.transform = 'translate(420%, -90%)';
+                this.burger.classList.toggle('transformation-hamburger');
             })
             this.root.append(this.burger);
         }
@@ -232,4 +224,15 @@ function makeBurgerMenu() {
 function logInForm() {
     let logInButton = document.querySelector('.login-link');
     logInButton.href = 'logIn.html';
+}
+
+//FUNCTION 
+function hideMenuOnSmallScreens(){
+    let item = document.querySelector('.menu');
+    item.classList.remove('menu__active');
+    let menu = document.querySelector('.header__menu-block');
+    menu.classList.remove('menu__fixed');
+    let burger = document.querySelector('.hamburger');
+    burger.classList.remove('transformation-hamburger');
+    burger.classList.remove('is-active');
 }
